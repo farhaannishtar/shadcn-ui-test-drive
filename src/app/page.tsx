@@ -6,11 +6,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import PopoverDemo from "@/components/ui/popover-radix"
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Button>Click me</Button>
+      <PopoverDemo />
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>Are you going to have a life-long career in tech?</AccordionTrigger>
