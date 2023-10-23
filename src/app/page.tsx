@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import {
   Accordion,
   AccordionContent,
@@ -7,11 +6,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import PopoverDemo from "@/components/ui/popover-radix"
+import { Flex, Text, Button } from '@radix-ui/themes';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button>Click me</Button>
+      <Flex direction="column" gap="2">
+        <Text>Hello from Radix Themes :)</Text>
+        <Button>Let us go</Button>
+      </Flex>
       <PopoverDemo />
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-
+import { Theme } from '@radix-ui/themes';
 const inter = Inter({ subsets: ['latin'] })
+import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Theme accentColor="crimson" grayColor="sand" radius="large" scaling="95%">
+          {children}
+        </Theme>
+      </body>
     </html>
   )
 }
